@@ -1,0 +1,47 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/styles.css">
+
+  <title>Getting Started Extension's Popup</title>
+  <script src="thirdParty/jquery-3.2.1.slim.min.js"></script>
+  <script src="thirdParty/popper.min.js"></script>
+  <script src="thirdParty/bootstrap.min.js"></script>
+
+  <script src="popup.js"></script>
+</head>
+
+<body>
+
+  <div class="card card-outline-primary" style="width: 30rem;">
+    <img class="card-img-top" src="http://lorempixel.com/400/200/">
+    <div class="card-block">
+      <h4 class="card-title"> Card title</h4>
+      <p class="card-text"> Some simple text</p>
+      <button class="btn btn-default" id="translation_button">Translate</button>
+    </div>
+  </div>
+  <p>
+    <a class="text-muted" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+        References:
+      </a>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-block">
+      <div class="text-muted">Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/"
+          title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0"
+          target="_blank">CC 3.0 BY</a></div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
