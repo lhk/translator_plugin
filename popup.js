@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   $("#translation_button").click(function () {
-    alert("dsfg for translation_button.click() called.");
+    alert("buttont clicked");
+
+    // query the current selection
+    chrome.extension.sendMessage({ 'getSelection': true }, (response) => {
+
+    });
   });
 });
