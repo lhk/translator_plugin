@@ -22,8 +22,8 @@
     "content_scripts": 
     [
         {
-            "matches":["*"],
-            "js": ["thirdParty/jquery-3.2.1.slim.min.js", "thirdParty/popper.min.js", "thirdParty/bootstrap.min.js"]
+            "matches":["<all_urls>"],
+            "js": ["thirdParty/jquery-3.2.1.slim.min.js", "thirdParty/popper.min.js", "thirdParty/bootstrap.min.js", "content_script.js"]
         }
     ]
   }
