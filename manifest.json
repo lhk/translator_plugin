@@ -11,12 +11,13 @@
     },
     "permissions": [
       "activeTab",
-      "storage"
+      "storage",
+      "tabs"
     ],
 
     "background":
     {
-        "scripts": ["thirdParty/jquery-3.2.1.slim.min.js", "thirdParty/popper.min.js", "thirdParty/bootstrap.min.js"]
+        "scripts": ["thirdParty/jquery-3.2.1.slim.min.js", "thirdParty/popper.min.js", "thirdParty/bootstrap.min.js", "background.js"]
     },
 
     "content_scripts": 
