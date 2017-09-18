@@ -16,22 +16,22 @@ function getSelection() {
         var sel = window.getSelection();
         var selectedText = sel.toString();
     }
-    chrome.runtime.sendMessage({'text': selectedText }, function(response) {
+    chrome.runtime.sendMessage({ 'text': selectedText }, function (response) {
         console.log(response.farewell);
-      });
+    });
 }
 
 // jquery to fire this up once the window has loaded
 $(function () {
     console.log("content script up and running");
     chrome.runtime.onMessage.addListener(
-        function(request, sender, sendResponse) {
-          console.log(sender.tab ?
-                      "from a content script:" + sender.tab.url :
-                      "from somewhere else");
-            console.log(request.json);
-          if (request.greeting == "hello")
-            sendResponse({farewell: "goodbye"});
+        function (request, sender, sendResponse) {
+            console.log(sender.tab ?
+                "from a content script:" + sender.tab.url :
+                "from somewhere else");
+            console.log(request.greeting);
+            if (request.greeting == "hello")
+                sendResponse({ farewell: "goodbye" });
         });
 });
 
