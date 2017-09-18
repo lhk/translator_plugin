@@ -21,7 +21,7 @@
     },
     "background": {
         "scripts": [
-            "thirdParty/jquery-3.2.1.slim.min.js",
+            "thirdParty/jquery-3.2.1.min.js",
             "thirdParty/popper.min.js",
             "thirdParty/bootstrap.min.js",
             "background.js"
@@ -33,9 +33,10 @@
                 "<all_urls>"
             ],
             "js": [
-                "thirdParty/jquery-3.2.1.slim.min.js",
+                "thirdParty/jquery-3.2.1.min.js",
                 "thirdParty/popper.min.js",
                 "thirdParty/bootstrap.min.js",
+                "thirdParty/vue.min.js",
                 "content_script.js"
             ]
         }
