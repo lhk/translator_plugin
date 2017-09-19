@@ -45,6 +45,12 @@ function onTranslation(translatedText) {
   // TODO: update the html
   console.log(translatedText);
   console.log("now we need to insert the translation into html");
+
+  var translation = translatedText[0][0][0];
+  var source = translatedText[0][0][1];
+
+  $("#translation_source").text(source);
+  $("#translation_target").text(translation);
 }
 
 document.addEventListener('DOMContentLoaded', () => {
