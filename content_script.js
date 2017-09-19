@@ -41,13 +41,13 @@ $(function () {
 
             console.log("incoming message");
             console.log(request);
-            
-            if(request.action == "getSelection"){
+
+            if (request.action == "getSelection") {
                 var selectedText = getSelectedText();
-                console.log("selectedText: "+selectedText);
+                console.log("selectedText: " + selectedText);
                 sendResponse({ selection: selectedText });
             }
-                
+
         });
 });
 
