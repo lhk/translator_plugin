@@ -1,12 +1,14 @@
+/// <reference path="node_modules/@types/chrome/index.d.ts" />
+
 // this script has only one purpose: getting selected text
 // TODO: once the core features are completed, it might be nice to have
 // the translation displayed as overlay to the html page
 // that would be the job of this script too: inserting html into the DOM
 
 // function to get selected text
-function getSelectedText() {
-    var focused = document.activeElement;
-    var selectedText;
+function getSelectedText() : string{
+    var focused : any = document.activeElement;
+    var selectedText : string;
 
     // TODO: this pattern seems like a strange browser compatibility workaround
     // what can we use that's cross platform ?
@@ -23,9 +25,6 @@ function getSelectedText() {
     }
 
     return selectedText;
-    chrome.runtime.sendMessage({ 'text': selectedText }, function (response) {
-        console.log(response.farewell);
-    });
 }
 
 // jquery to fire this up once the window has loaded
