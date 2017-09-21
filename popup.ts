@@ -11,14 +11,17 @@ function querySelection(callback: (string) => void) {
 }
 
 // send message to google translation api to get translation
-function queryTranslation(translation_text : string, callback : (string) => void ) {
+function queryTranslation(translation_text: string, callback: (string) => void) {
 
-  var encodedText : string = encodeURI(translation_text);
-  var sourceLang : string = 'auto';
-  var targetLang : string = 'de';
+  var encodedText: string = encodeURI(translation_text);
+  var sourceLang: string = 'auto';
+  var targetLang: string = 'de';
 
-  var url : string = "https://translate.googleapis.com/translate_a/single" +
+  var url: string = "https://translate.googleapis.com/translate_a/single" +
     "?client=gtx" +
+    "&dt=bd" +
+    "&dj=1" +
+    "&source=input" +
     "&sl=" + sourceLang +
     "&tl=" + targetLang +
     "&dt=t&q=" + encodedText;
@@ -44,16 +47,16 @@ function onSelection(selectedText) {
 }
 
 // callback once the translation is known
-function onTranslation(translatedText) {
+function onTranslation(translation) {
   // TODO: update the html
-  console.log(translatedText);
+  console.log(translation);
   console.log("now we need to insert the translation into html");
 
-  var translation : string = translatedText[0][0][0];
-  var source : string = translatedText[0][0][1];
+  var translatedText: string = "placeholder";
+  var source: string = "Platzhalter";
 
   $("#translation_source").text(source);
-  $("#translation_target").text(translation);
+  $("#translation_target").text(translatedText);
 }
 
 document.addEventListener('DOMContentLoaded', () => {

@@ -15,6 +15,9 @@ function queryTranslation(translation_text, callback) {
     var targetLang = 'de';
     var url = "https://translate.googleapis.com/translate_a/single" +
         "?client=gtx" +
+        "&dt=bd" +
+        "&dj=1" +
+        "&source=input" +
         "&sl=" + sourceLang +
         "&tl=" + targetLang +
         "&dt=t&q=" + encodedText;
@@ -34,14 +37,14 @@ function onSelection(selectedText) {
     queryTranslation(selectedText, onTranslation);
 }
 // callback once the translation is known
-function onTranslation(translatedText) {
+function onTranslation(translation) {
     // TODO: update the html
-    console.log(translatedText);
+    console.log(translation);
     console.log("now we need to insert the translation into html");
-    var translation = translatedText[0][0][0];
-    var source = translatedText[0][0][1];
+    var translatedText = "placeholder";
+    var source = "Platzhalter";
     $("#translation_source").text(source);
-    $("#translation_target").text(translation);
+    $("#translation_target").text(translatedText);
 }
 document.addEventListener('DOMContentLoaded', () => {
     console.log("loaded popup.js");
