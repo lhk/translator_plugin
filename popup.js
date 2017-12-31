@@ -41,8 +41,8 @@ function onTranslation(translation) {
     // TODO: update the html
     console.log(translation);
     console.log("now we need to insert the translation into html");
-    var translatedText = "placeholder";
-    var source = "Platzhalter";
+    var translatedText = translation["sentences"][0]["trans"];
+    var source = translation["sentences"][0]["orig"];
     $("#translation_source").text(source);
     $("#translation_target").text(translatedText);
 }
