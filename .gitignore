@@ -1,6 +1,7 @@
 node_modules/
 
-popup.js
-background.js
-
 *.map
+
+/content_script.js
+/popup.js
+/background.js
