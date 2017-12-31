@@ -66,10 +66,13 @@ function onTranslation(translation) {
 document.addEventListener('DOMContentLoaded', () => {
 
   console.log("loaded popup.js");
-  updateView();
+
+  // after this window is opened, we query the current selection
+  // the onSelection callback will trigger a translation
+  querySelection(onSelection);
 
   $("#translation_button").click(function () {
     console.log("button clicked");
-    updateView();
+    onSelection($("#translation_source").text);
   });
 });
