@@ -1,5 +1,7 @@
 /// <reference path="node_modules/@types/jquery/index.d.ts" />
 /// <reference path="node_modules/@types/chrome/index.d.ts" />
+/// <reference path="node_modules/vue/types/index.d.ts"/>
+/// <reference path="node_modules/vue/types/vue.d.ts"/>
 
 // send message to content script to get selected text
 function querySelection(callback: (string) => void) {

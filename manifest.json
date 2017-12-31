@@ -21,9 +21,9 @@
     },
     "background": {
         "scripts": [
-            "thirdParty/jquery-3.2.1.min.js",
-            "thirdParty/popper.min.js",
-            "thirdParty/bootstrap.min.js",
+            "node_modules/jquery/dist/jquery.min.js",
+            "node_modules/popper.js/dist/popper.min.js",
+            "node_modules/bootstrap/dist/js/bootstrap.min.js",
             "background.js"
         ]
     },
@@ -33,10 +33,10 @@
                 "<all_urls>"
             ],
             "js": [
-                "thirdParty/jquery-3.2.1.min.js",
-                "thirdParty/popper.min.js",
-                "thirdParty/bootstrap.min.js",
-                "thirdParty/vue.min.js",
+                "node_modules/jquery/dist/jquery.min.js",
+                "node_modules/popper.js/dist/popper.min.js",
+                "node_modules/bootstrap/dist/js/bootstrap.min.js",
+                "node_modules/vue/dist/vue.min.js",
                 "content_script.js"
             ]
         }
