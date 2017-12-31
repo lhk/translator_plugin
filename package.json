@@ -1,0 +1,23 @@
+{
+  "name": "translator_plugin",
+  "version": "1.0.0",
+  "description": "the development is done with typescript.\r you need to configure the typing files.",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lhk/translator_plugin.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/lhk/translator_plugin/issues"
+  },
+  "homepage": "https://github.com/lhk/translator_plugin#readme",
+  "dependencies": {
+    "@types/chrome": "0.0.57",
+    "@types/jquery": "^3.2.17"
+  }
+}
