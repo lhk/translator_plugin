@@ -1,7 +1,6 @@
 /// <reference path="node_modules/@types/jquery/index.d.ts" />
 /// <reference path="node_modules/@types/chrome/index.d.ts" />
 /// <reference path="node_modules/vue/types/index.d.ts"/>
-/// <reference path="node_modules/vue/types/vue.d.ts"/>
 
 
 
@@ -59,7 +58,7 @@ function onTranslation(translation) {
   var translatedText: string = translation["sentences"][0]["trans"];
   var source: string = translation["sentences"][0]["orig"];
 
-  $("#translation_source").text(source);
+  $("#translation_source").val(source);
   $("#translation_target").text(translatedText);
 }
 
@@ -73,6 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   $("#translation_button").click(function () {
     console.log("button clicked");
-    onSelection($("#translation_source").text);
+    onSelection($("#translation_source").val());
   });
 });
